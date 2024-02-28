@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>career</h1>
+            </div>
+            <div class="links">
+                <a href="">home</a>
+                <a href="">feed</a>
+            </div>
+            <div class="user">
+            {% if session.logged_in == NULL %}
+                <a href="/register" class="btn btn-primary btn-lg">Register</a>
+                <a href="/login" class="btn btn-success btn-lg">Login</a>
+            {% endif %}
+            </div>
+        </div>
+    </header>
+</body>
+</html>
