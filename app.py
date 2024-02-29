@@ -13,7 +13,6 @@ app.config["MYSQL_USER"] = "root"
 app.config["MYSQL_PASSWORD"] = ""
 app.config["MYSQL_DB"] = "database"
 
-
 @app.route('/')
 def index():
     return render_template("home.html")
