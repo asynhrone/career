@@ -2,22 +2,39 @@
 
 {% block title %}Домашняя страница{% endblock title %}
 {% block body %}
-    <h1>Последние записи</h1>
-    <div class="article">
-        <h3 class="author">@youngbody113</h3>
-        <h4 class="created_by">сегодня в 11:04</h4>
-        <p class="article_text">Произвольный текст</p>
-        <div class="buttons">
-            <button class="like">
-                <span class="material-symbols-outlined">
-                    favorite
-                </span>
-            </button>
-            <button class="comments">
-                <span class="material-symbols-outlined">
-                    chat_bubble
-                </span>
-            </button>
+<h1>Последнее</h1>
+<section class="articles_side_2x">
+    <div class="article_1st" style="background-image: url(../static/images/car.jpg);">
+        <a href="">
+            <div class="article_content">
+                <h3 style="color: white;">Гиперкар Yangwang U9: четыре электромотора и активная подвеска</h3>
+            </div>
+        </a>
+    </div>
+    <div class="articles_side_2x_right">
+        <div class="article">
+            <a href="">
+                <div class="article_content">
+                    <h3>Гиперкар Yangwang U9: четыре электромотора и активная подвеска</h3>
+                </div>
+            </a>
+        </div>
+        <div class="article">
+            <a href="">
+                <div class="article_content">
+                    <h3>Гиперкар Yangwang U9: четыре электромотора и активная подвеска</h3>
+                </div>
+            </a>
+        </div>
+        <div class="article">
+            <a href="">
+                <div class="article_content">
+                    <h3>Гиперкар Yangwang U9: четыре электромотора и активная подвеска</h3>
+                </div>
+            </a>
         </div>
     </div>
+</section>
+<h1 style="margin-top: 30px;">Может быть интересно</h1>
+<script src="../static/index.js"></script>
 {% endblock %}
