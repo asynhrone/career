@@ -92,7 +92,6 @@ main {
 .article:last-child {
     border-bottom: none;
 }
-
 .activity-block {
     width: 50%;
     margin: 0 auto;

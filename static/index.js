@@ -38,7 +38,6 @@ function getWeather(city) {
             console.error('Ошибка:', error);
         });
 }
-
 function getUserCity() {
     fetch('http://ip-api.com/json')
         .then(response => response.json())
@@ -48,5 +47,4 @@ function getUserCity() {
         })
         .catch(error => console.error('Ошибка определения города:', error));
 }
-
 getUserCity();
