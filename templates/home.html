@@ -3,71 +3,40 @@
 {% block title %}Домашняя страница{% endblock title %}
 {% block body %}
 <h1>Последнее</h1>
-<section class="articles_side_2x">
-    <div class="article_1st" style="background-image: url(../static/images/car.jpg);">
-        <a href="">
+<section class="last_news_slide">
+    <div class="big_article" style="background-image: url('{{ big_article.image_url }}'); border-radius: 25px 0px 0px 25px;">
+        <a href="{{ big_article.link }}">
             <div class="article_content">
-                <h3 style="color: white;">Гиперкар Yangwang U9: четыре электромотора и активная подвеска</h3>
+                <h4>{{ big_article.time }}</h4>
+                <h3 style="color: white;">{{ big_article.title }}</h3>
             </div>
         </a>
     </div>
-    <div class="articles_side_2x_right">
+    <div class="last_news_slide_right">
+        {% for article in articles %}
         <div class="article">
-            <a href="">
+            <a href="{{ article.link }}">
                 <div class="article_content">
-                    <h3>Гиперкар Yangwang U9: четыре электромотора и активная подвеска</h3>
+                    <h4>{{ article.time }}</h4>
+                    <h3>{{ article.title }}</h3>
                 </div>
             </a>
         </div>
-        <div class="article">
-            <a href="">
-                <div class="article_content">
-                    <h3>Гиперкар Yangwang U9: четыре электромотора и активная подвеска</h3>
-                </div>
-            </a>
-        </div>
-        <div class="article">
-            <a href="">
-                <div class="article_content">
-                    <h3>Гиперкар Yangwang U9: четыре электромотора и активная подвеска</h3>
-                </div>
-            </a>
-        </div>
+        {% endfor %}
     </div>
 </section>
 <h1 style="margin-top: 30px;">Может быть интересно</h1>
-<section class="articles_side_2x">
-    <div class="article_1st" style="background-image: url(../static/images/car.jpg);">
-        <a href="">
-            <div class="article_content">
-                <h3 style="color: white;">Гиперкар Yangwang U9: четыре электромотора и активная подвеска</h3>
-            </div>
-        </a>
-    </div>
-    <div class="articles_side_2x_right">
-        <div class="article">
-            <a href="">
-                <div class="article_content">
-                    <h3>Гиперкар Yangwang U9: четыре электромотора и активная подвеска</h3>
+<section class="interesting_slides">
+    {% for article in maybe_interesting_news %}
+        <div class="interesting_slide" style="background-image: url('{{ article.image_url }}');">
+            <a href="{{ article.link }}">
+                <div class="interesting_slide_content">
+                    <h4>{{ article.time }}</h4>
+                    <h2 style="margin-top: 10px;">{{ article.title }}</h2>
                 </div>
             </a>
         </div>
-        <div class="article">
-            <a href="">
-                <div class="article_content">
-                    <h3>Гиперкар Yangwang U9: четыре электромотора и активная подвеска</h3>
-                </div>
-            </a>
-        </div>
-        <div class="article">
-            <a href="">
-                <div class="article_content">
-                    <h3>Гиперкар Yangwang U9: четыре электромотора и активная подвеска</h3>
-                </div>
-            </a>
-        </div>
-    </div>
+    {% endfor %}
 </section>
-
 <script src="../static/index.js"></script>
 {% endblock %}

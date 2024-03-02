@@ -48,3 +48,15 @@ function getUserCity() {
         .catch(error => console.error('Ошибка определения города:', error));
 }
 getUserCity();
+
+window.addEventListener('load', function() {
+    // Скрываем лоадер через секунду после загрузки страницы
+    setTimeout(function() {
+        var loaderWrapper = document.getElementById('loader-wrapper');
+        var main = document.getElementById('main');
+        if (loaderWrapper) {
+            loaderWrapper.style.display = 'none';
+            main.style.display = 'block';
+        }
+    }, 1000);
+});

@@ -8,9 +8,13 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body>
+    <div id="loader-wrapper">
+        <h1 href="/">техно<strong>.пресса</strong></h1>
+    </div>
     {% include 'includes/_header.html' %}
-    <main>
+    <main style="display: none;" id="main">
     {% block body %}{% endblock %}
     </main>
+    {% include 'includes/_footer.html' %}
 </body>
 </html>
